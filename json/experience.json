@@ -1,0 +1,23 @@
+[
+  {
+    "type": "Work",
+    "role": "Fullstack Developer",
+    "company": "Awesome Tech Inc.",
+    "date": "2023 - Present",
+    "description": "Building and maintaining scalable web applications, collaborating with cross-functional teams, and delivering solutions that improve user experiences."
+  },
+  {
+    "type": "Work",
+    "role": "Frontend Developer",
+    "company": "Creative Studio",
+    "date": "2021 - 2023",
+    "description": "Developed modern user interfaces, optimized performance, and worked closely with designers to bring concepts to life."
+  },
+  {
+    "type": "Education",
+    "role": "Bachelor of Science in Computer Science",
+    "company": "Tech University",
+    "date": "2017 - 2021",
+    "description": "Studied software engineering, algorithms, and web development. Graduated with honors."
+  }
+]

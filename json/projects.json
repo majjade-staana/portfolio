@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Project One",
+    "description": "A short description about this project. What it does, why it matters, and your role in building it.",
+    "image": "/project1.png",
+    "demo": "https://example.com/project1",
+    "code": "https://github.com/yourusername/project1"
+  },
+  {
+    "title": "Project Two",
+    "description": "Another cool project. Keep the text concise and highlight the impact or technologies used.",
+    "image": "/project2.png",
+    "demo": "https://example.com/project2",
+    "code": "https://github.com/yourusername/project2"
+  },
+  {
+    "title": "Project Three",
+    "description": "Add a few sentences about this one. Focus on what problem it solved or what you learned.",
+    "image": "/project3.png",
+    "demo": "https://example.com/project3",
+    "code": "https://github.com/yourusername/project3"
+  }
+]

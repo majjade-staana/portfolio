@@ -1,0 +1,55 @@
+"use client";
+
+import { motion } from "framer-motion";
+import Image from "next/image";
+import skills from "@/json/skills.json";
+
+export default function Skills() {
+  return (
+    <section id="skills" className="px-6 md:px-16 xl:px-0 py-10 ">
+      <div className="max-w-7xl mx-auto text-center">
+        {/* Section Title */}
+        <motion.h2
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-3xl md:text-4xl font-bold mb-12 dark:text-yellow-500 "
+        >
+          Skills & Tech Stack
+        </motion.h2>
+
+        {/* Categories */}
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {skills.map((category, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.2, duration: 0.6 }}
+              className="bg-white dark:bg-gray-700 rounded-2xl shadow-md p-6"
+            >
+              <h3 className="text-xl font-semibold mb-6">{category.name}</h3>
+              <div className="grid grid-cols-3 gap-6">
+                {category.items.map((item, i) => (
+                  <div key={i} className="flex flex-col items-center">
+                    <div className="w-12 h-12 relative mb-2">
+                      <Image
+                        src={item.icon}
+                        alt={item.title}
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
+                    <p className="text-sm text-gray-700 dark:text-gray-300">
+                      {item.title}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

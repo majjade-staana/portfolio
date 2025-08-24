@@ -1,0 +1,60 @@
+[
+  {
+    "name": "Frontend",
+    "items": [
+      { "title": "React.js", "icon": "/icons/reactjs.svg" },
+      { "title": "Next.js", "icon": "/icons/nextjs.svg" },
+      { "title": "Vue.js", "icon": "/icons/vuejs.svg" },
+      { "title": "Less", "icon": "/icons/less.svg" },
+      { "title": "Tailwind", "icon": "/icons/tailwind.svg" },
+      { "title": "Bootstrap", "icon": "/icons/bootstrap.svg" },
+      { "title": "HTML", "icon": "/icons/html.svg" },
+      { "title": "CSS", "icon": "/icons/css.svg" },
+      { "title": "JavaScript", "icon": "/icons/javascript.svg" }
+    ]
+  },
+  {
+    "name": "Backend",
+    "items": [
+      { "title": "Node.js", "icon": "/icons/nodejs.svg" },
+      { "title": "Express.js", "icon": "/icons/expressjs.svg" },
+      { "title": "Laravel", "icon": "/icons/laravel.svg" },
+      { "title": "PHP", "icon": "/icons/php.svg" },
+      { "title": "CodeIgniter", "icon": "/icons/codeigniter.svg" }
+    ]
+  },
+  {
+    "name": "Tools & Others",
+    "items": [
+      { "title": "GitHub", "icon": "/icons/github.svg" },
+      { "title": "GitLab", "icon": "/icons/gitlab.svg" },
+      { "title": "Postman API", "icon": "/icons/postman.svg" },
+      { "title": "JSON", "icon": "/icons/json.svg" },
+      { "title": "AWS - Interactive Video Service", "icon": "/icons/aws-ivs.svg" }
+    ]
+  },
+  {
+    "name": "Databases",
+    "items": [
+      { "title": "MySQL", "icon": "/icons/mysql.svg" },
+      { "title": "PostgreSQL", "icon": "/icons/postgresql.svg" },
+      { "title": "PhpMyAdmin", "icon": "/icons/phpmyadmin.svg" }
+    ]
+  },
+  {
+    "name": "Cloud",
+    "items": [
+      { "title": "AWS", "icon": "/icons/aws.svg" },
+      { "title": "GCP", "icon": "/icons/gcp.svg" }
+    ]
+  },
+  {
+    "name": "CMS",
+    "items": [
+      { "title": "Drupal", "icon": "/icons/drupal.svg" },
+      { "title": "OctoberCMS", "icon": "/icons/octobercms.svg" },
+      { "title": "WordPress", "icon": "/icons/wordpress.svg" },
+      { "title": "WooCommerce", "icon": "/icons/woocommerce.svg" }
+    ]
+  }
+]
