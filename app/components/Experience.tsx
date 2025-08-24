@@ -31,7 +31,7 @@ export default function Experience() {
               className="mb-10 ml-6"
             >
               {/* Dot */}
-              <div className="absolute -left-3 w-6 h-6 bg-yellow-500 rounded-full border-4 "></div>
+              <div className="absolute -left-3 w-6 h-6 bg-yellow-500 rounded-full border-4 border-background"></div>
 
               {/* Content */}
               <div className="bg-card p-6 rounded-xl shadow-md">
