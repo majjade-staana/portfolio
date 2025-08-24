@@ -6,14 +6,14 @@ import projects from "@/json/projects.json";
 
 export default function Projects() {
   return (
-    <section id="projects" className="px-6 md:px-16 xl:px-0 py-10 bg-yellow-500 dark:bg-gray-700">
+    <section id="projects" className="px-6 md:px-16 xl:px-0 py-10 bg-accent">
       <div className="max-w-7xl mx-auto text-center">
         {/* Section Title */}
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-3xl md:text-4xl font-bold mb-12 dark:text-yellow-500"
+          className="text-3xl md:text-4xl font-bold mb-12"
         >
           Projects
         </motion.h2>
@@ -26,7 +26,7 @@ export default function Projects() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.2, duration: 0.6 }}
-              className="bg-gray-50 dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden flex flex-col"
+              className="bg-card rounded-2xl shadow-lg overflow-hidden flex flex-col"
             >
               {/* Project Image */}
               <div className="relative w-full h-48">
@@ -41,7 +41,7 @@ export default function Projects() {
               {/* Project Content */}
               <div className="p-6 flex flex-col flex-grow">
                 <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                <p className="text-gray-600 dark:text-gray-300 flex-grow">
+                <p className="flex-grow">
                   {project.description}
                 </p>
 
