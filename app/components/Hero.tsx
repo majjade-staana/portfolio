@@ -16,7 +16,7 @@ export default function Hero() {
         <h1 className="text-3xl md:text-5xl font-bold mb-4">
           Hi, I’m <span className="text-yellow-500">Majjade <span className="truncate">Sta. Ana</span></span> 👋
         </h1>
-        <p className="text-gray-600 dark:text-gray-400 text-lg md:text-xl mb-6">
+        <p className="text-lg md:text-xl mb-6">
           A versatile developer passionate about creating modern, user-friendly, and impactful digital experiences.
         </p>
 

@@ -13,7 +13,7 @@ export default function About() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-3xl md:text-4xl font-bold text-gray-800 mb-6 dark:text-gray-100"
+          className="text-3xl md:text-4xl font-bold mb-6"
         >
           About Me
         </motion.h2>
@@ -22,7 +22,7 @@ export default function About() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.6 }}
-          className="text-gray-800 text-lg leading-relaxed mb-6 dark:text-gray-200"
+          className="text-lg leading-relaxed mb-6 "
         >
           I’m a developer who enjoys turning ideas into digital solutions. 
           I have experience working across the full stack, from crafting 
@@ -35,7 +35,7 @@ export default function About() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.6 }}
-          className="text-gray-800 text-lg leading-relaxed dark:text-gray-200"
+          className="text-lg leading-relaxed"
         >
           Outside of coding, I’m always exploring new technologies, learning 
           best practices, and finding ways to grow both professionally and 
