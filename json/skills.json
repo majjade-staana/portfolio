@@ -51,6 +51,7 @@
   {
     "name": "CMS",
     "items": [
+      { "title": "Hubspot", "icon": "/icons/hubspot.svg" },
       { "title": "Drupal", "icon": "/icons/drupal.svg" },
       { "title": "OctoberCMS", "icon": "/icons/octobercms.svg" },
       { "title": "WordPress", "icon": "/icons/wordpress.svg" },

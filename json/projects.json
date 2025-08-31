@@ -1,23 +1,90 @@
 [
   {
-    "title": "Project One",
-    "description": "A short description about this project. What it does, why it matters, and your role in building it.",
-    "image": "/project1.png",
-    "demo": "https://example.com/project1",
-    "code": "https://github.com/yourusername/project1"
+    "title": "Cebuana Lhuillier Jewelry",
+    "description": "A comprehensive and ongoing full-stack e-commerce platform designed specifically for the jewelry industry. Beyond standard product listings, it features dynamic inventory management, secure checkout, and customer engagement tools, all powered by WooCommerce on the backend. The frontend is developed with Next.js, providing lightning-fast performance, SEO optimization, and a fully responsive, mobile-first design. One of the standout features of the platform is its integration with Camweara, enabling customers to virtually try on jewelry pieces in real-time using augmented reality. This creates a highly interactive and personalized shopping experience that bridges the gap between physical and online retail. The project is built with scalability in mind, ensuring it can grow alongside the business while delivering a seamless and luxurious digital storefront experience.",
+    "image": "/cebuana.png",
+    "demo": null,
+    "code": null,
+    "tech": ["Headless WordPress", "WooCommerce", "Next.js"],
+    "company": "Qairos Inc.",
+    "type": "From Scratch",
+    "highlight": true
   },
   {
-    "title": "Project Two",
-    "description": "Another cool project. Keep the text concise and highlight the impact or technologies used.",
-    "image": "/project2.png",
-    "demo": "https://example.com/project2",
-    "code": "https://github.com/yourusername/project2"
+    "title": "DIGICON DMAP 2025",
+    "description": "Public-facing informational website for DMAP 2025 where users can register for the event. Built with a modern headless setup.",
+    "image": "/digicon.png",
+    "demo": "https://digicon.dmap.com.ph/",
+    "code": null,
+    "tech": ["Headless WordPress", "Next.js"],
+    "company": "Qairos Inc.",
+    "type": "From Scratch"
   },
   {
-    "title": "Project Three",
-    "description": "Add a few sentences about this one. Focus on what problem it solved or what you learned.",
-    "image": "/project3.png",
-    "demo": "https://example.com/project3",
-    "code": "https://github.com/yourusername/project3"
+    "title": "DIGICON DMAP 2024 - Registration",
+    "description": "Public-facing informational website for DMAP 2025 where users can register for the event. Built with a modern headless setup.",
+    "image": "/digicon.png",
+    "demo": null,
+    "code": null,
+    "tech": ["Headless WordPress", "Next.js"],
+    "company": "Qairos Inc.",
+    "type": "From Scratch"
+  },
+  {
+    "title": "Project Management Information System",
+    "description": "Developed for DOST-SEI to manage department line-item budgets with varying formats. Generates reports for congressional submission, schedules activities, and provides real-time approval workflows.",
+    "image": "/pmis.png",
+    "demo": null,
+    "code": null,
+    "tech": ["Laravel", "Vue.js", "PostgreSQL"],
+    "company": "DOST-SEI",
+    "type": "From Scratch"
+  },
+  {
+    "title": "Biometrics Summary System",
+    "description": "Built an in-house system for Philippine Investment that processes CLSX/CSV biometrics files to generate attendance reports. Includes editing for official business and leave tracking.",
+    "image": "/biometrics.png",
+    "demo": null,
+    "code": null,
+    "tech": ["CodeIgniter", "MySQL"],
+    "company": "Philippine Investment",
+    "type": "From Scratch"
+  },
+  {
+    "title": "BIAS",
+    "description": "Experimental live streaming platform with interactive features, AWS IVS integration, and Xendit payments. Project discontinued.",
+    "image": "/bias.png",
+    "demo": null,
+    "code": null,
+    "tech": ["Express", "Vue.js", "AWS IVS", "Xendit"],
+    "company": "Qairos Inc.",
+    "type": "From Scratch"
+  },
+  {
+    "title": "Maintenance Projects",
+    "description": "Handled ongoing maintenance, feature updates, and reskins for various client websites and systems.",
+    "image": "/maintenance.png",
+    "projects": [
+      { "title": "7-Eleven", "tech": ["WordPress"], "link": "https://www.7-eleven.com.ph/" },
+      { "title": "Intermed", "tech": ["WordPress"], "link": "https://www.intermed.ph/" },
+      { "title": "Immunomax", "tech": ["WordPress"], "link": "https://www.immunomax.com.ph/" },
+      { "title": "Cherifer", "tech": ["WordPress"], "link": "https://www.cherifer.ph/" },
+      { "title": "Juanhand", "tech": ["WordPress", "Elementor"], "link": "https://www.juanhand.com/" },
+      { "title": "Booking Platform (in-house)", "tech": ["Laravel"], "link": null }
+    ],
+    "type": "Maintenance"
+  },
+  {
+    "title": "Modules & Pages",
+    "description": "Contributed specific modules and pages to larger projects, often enhancing functionality or delivering custom UI sections.",
+    "image": "/modules.png",
+    "projects": [
+      { "title": "Honda Philippines", "tech": ["OctoberCMS", "Vue.js"], "link": "https://www.hondaphil.com/" },
+      { "title": "The Medical City", "tech": ["OctoberCMS", "Vue.js"], "link": "https://www.themedicalcity.com/" },
+      { "title": "DITO PH", "tech": ["HubSpot"], "link": "https://dito.ph/" },
+      { "title": "Bearbrand", "tech": ["Drupal"], "link": null, "status": "Discontinued" },
+      { "title": "Barangay Nestle", "tech": ["Drupal"], "link": null, "status": "Discontinued" }
+    ],
+    "type": "Modules & Pages"
   }
 ]

@@ -22,8 +22,6 @@ export default function Experience() {
     return () => window.removeEventListener("resize", updateMaxLength);
   }, []);
 
-  
-
   return (
     <section
       id="experience"
@@ -60,7 +58,7 @@ export default function Experience() {
                 <div className="absolute -left-3 w-6 h-6 bg-yellow-500 rounded-full border-4 border-background"></div>
 
                 {/* Content */}
-                <div className="bg-card p-6 rounded-xl shadow-md">
+                <div className="bg-card p-6 rounded-xl shadow-md transition-transform duration-200 hover:-translate-y-1">
                   <span className="text-sm font-medium text-yellow-600">
                     {item.date}
                   </span>
