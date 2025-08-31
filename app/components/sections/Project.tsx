@@ -35,6 +35,7 @@ export default function Projects() {
   const groupedProjects = projects.filter((p) => p.projects);
 
   const [maxLength, setMaxLength] = useState(500);
+  const [expanded, setExpanded] = useState<number | null>(null);
 
   // Detect screen size
   useEffect(() => {
@@ -67,7 +68,6 @@ export default function Projects() {
         {/* Individual Projects Grid */}
         <div className="text-left grid md:grid-cols-3 gap-8 mb-8 pb-8 border-b-2 border-bty">
           {individualProjects.map((project, index) => {
-            const [expanded, setExpanded] = useState(false);
             const length = project.highlight ? maxLength * 2.5 : maxLength
             const isLong = project.description.length > length;
             const displayedText = expanded
@@ -108,7 +108,7 @@ export default function Projects() {
                 <p className="flex-grow text-lg">{displayedText}</p>
                 {isLong && (
                   <button
-                    onClick={() => setExpanded(!expanded)}
+                    onClick={() => setExpanded(index)}
                     className="mt-2 text-yellow-600 text-sm font-medium md:hover:underline text-left"
                   >
                     {expanded ? "Show less" : "Read more"}
