@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 
 export default function Experience() {
   const [maxLength, setMaxLength] = useState(500);
+  const [expanded, setExpanded] = useState<number | null>(null);
 
   // Detect screen size
   useEffect(() => {
@@ -41,9 +42,8 @@ export default function Experience() {
         {/* Timeline */}
         <div className="relative border-l border-gray-300">
           {experience.map((item, index) => {
-            const [expanded, setExpanded] = useState(false);
             const isLong = item.description.length > maxLength;
-            const displayedText = expanded
+            const displayedText = expanded === index
               ? item.description
               : item.description.slice(0, maxLength) + (isLong ? "..." : "");
             return (
@@ -58,7 +58,7 @@ export default function Experience() {
                 <div className="absolute -left-3 w-6 h-6 bg-yellow-500 rounded-full border-4 border-background"></div>
 
                 {/* Content */}
-                <div className="bg-card p-6 rounded-xl shadow-md transition-transform duration-200 hover:-translate-y-1">
+                <div className="bg-card p-6 rounded-xl shadow-md">
                   <span className="text-sm font-medium text-yellow-600">
                     {item.date}
                   </span>
@@ -73,10 +73,10 @@ export default function Experience() {
 
                   {isLong && (
                     <button
-                      onClick={() => setExpanded(!expanded)}
+                      onClick={() => setExpanded(index === expanded ? null : index)}
                       className="mt-2 text-yellow-600 text-sm font-medium hover:underline"
                     >
-                      {expanded ? "Show less" : "Read more"}
+                      {index === expanded ? "Show less" : "Read more"}
                     </button>
                   )}
                 </div>
