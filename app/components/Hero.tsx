@@ -17,7 +17,7 @@ export default function Hero() {
           Hi, I’m <span className="text-yellow-500">Majjade <span className="truncate">Sta. Ana</span></span> 👋
         </h1>
         <p className="text-lg md:text-xl mb-6">
-          A versatile developer passionate about creating modern, user-friendly, and impactful digital experiences.
+          Full-stack developer with experience in Next.js, Laravel, and diverse platforms, delivering scalable apps and modern web solutions.
         </p>
 
         <div className="flex gap-4 justify-center md:justify-start">

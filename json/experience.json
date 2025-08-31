@@ -1,23 +1,44 @@
 [
   {
     "type": "Work",
-    "role": "Fullstack Developer",
-    "company": "Awesome Tech Inc.",
-    "date": "2023 - Present",
-    "description": "Building and maintaining scalable web applications, collaborating with cross-functional teams, and delivering solutions that improve user experiences."
+    "role": "Full Stack Developer",
+    "company": "Qairos Inc.",
+    "date": "2022 - Present",
+    "description": "My recent work has focused on building modern applications with Next.js and headless WordPress, including e-commerce solutions integrated with WooCommerce for scalable and high-performance client websites, such as Cebuana Lhuillier Jewelry. Beyond this, I have experience leading back-end development for an in-house live streaming platform using Express.js, AWS IVS, and Xendit for payment processing. I have also delivered projects across different stacks such as Drupal, HubSpot, OctoberCMS, Laravel, and Vue.js, while maintaining and revamping WordPress sites for clients including 7-Eleven PH and JuanHand. This mix of modern frameworks and legacy system management has strengthened my adaptability and ability to deliver end-to-end solutions."
   },
   {
     "type": "Work",
-    "role": "Frontend Developer",
-    "company": "Creative Studio",
-    "date": "2021 - 2023",
-    "description": "Developed modern user interfaces, optimized performance, and worked closely with designers to bring concepts to life."
+    "role": "Full Stack Developer",
+    "company": "Department of Science and Technology - Science Education Institute",
+    "date": "2021 - 2022",
+    "description": "Developed an internal system to digitize and streamline report generation across multiple departments, replacing manual Excel-based workflows. Built with Laravel, Vue.js, and PostgreSQL, the platform replicated familiar Excel layouts while introducing new features such as a consolidated calendar of activities and an approval workflow with real-time status tracking. This project improved efficiency, reduced errors, and ensured smoother collaboration between departments."
+  },
+  {
+    "type": "Work",
+    "role": "Jr. IT Programmer",
+    "company": "Philippine Investment",
+    "date": "2021 - 2021",
+    "description": "As a Jr. IT Programmer at an accounting firm specializing in property sales, I provided technical support and maintenance for an internal web application built with CodeIgniter, collaborating with different departments to troubleshoot issues and enhance functionality. Beyond my core responsibilities, I took the initiative to develop efficiency tools, including a biometric data processing system that automated the handling of Excel/CSV files, summarized employee attendance, and generated detailed reports. This solution also streamlined HR operations by automatically checking holidays and managing employee absences, significantly reducing manual workload."
+  },
+  {
+    "type": "Work",
+    "role": "Collections Executive",
+    "company": "Probegroup PH",
+    "date": "2019 - 2020",
+    "description": "Handled outbound and inbound calls with Australian clients to negotiate debt repayments, set up payment plans, and process account adjustments. Developed strong problem-solving and communication skills while navigating sensitive financial situations, balancing empathy with adherence to company policies. Built resilience, attention to detail, and adaptability—qualities that continue to support my work as a developer in analyzing challenges, collaborating effectively, and delivering practical solutions."
   },
   {
     "type": "Education",
-    "role": "Bachelor of Science in Computer Science",
-    "company": "Tech University",
-    "date": "2017 - 2021",
-    "description": "Studied software engineering, algorithms, and web development. Graduated with honors."
+    "role": "Bachelor of Technology in Information Technology",
+    "company": "Technological University of the Philippines - Taguig",
+    "date": "2018 - 2019",
+    "description": "Completed a ladderized program with a strong focus on programming and software development. Gained hands-on experience in building applications, database management, and developing problem-solving skills that became the foundation of my career as a full-stack developer."
+  },
+  {
+    "type": "Education",
+    "role": "Computer Engineering Technology",
+    "company": "Technological University of the Philippines - Taguig",
+    "date": "2015 - 2018",
+    "description": "Studied a three-year program covering both hardware and software fundamentals, including computer systems, electronics, and IT basics. Built a strong technical foundation in troubleshooting, systems analysis, and technical adaptability before transitioning into software-focused studies."
   }
 ]
