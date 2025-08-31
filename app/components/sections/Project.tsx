@@ -70,7 +70,7 @@ export default function Projects() {
           {individualProjects.map((project, index) => {
             const length = project.highlight ? maxLength * 2.5 : maxLength
             const isLong = project.description.length > length;
-            const displayedText = expanded
+            const displayedText = expanded === index
               ? project.description
               : project.description.slice(0, length) + (isLong ? "..." : "");
 
@@ -108,10 +108,10 @@ export default function Projects() {
                 <p className="flex-grow text-lg">{displayedText}</p>
                 {isLong && (
                   <button
-                    onClick={() => setExpanded(index)}
+                    onClick={() => setExpanded(index === expanded ? null : index)}
                     className="mt-2 text-yellow-600 text-sm font-medium md:hover:underline text-left"
                   >
-                    {expanded ? "Show less" : "Read more"}
+                    {index === expanded ? "Show less" : "Read more"}
                   </button>
                 )}
 
