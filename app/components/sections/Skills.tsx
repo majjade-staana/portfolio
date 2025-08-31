@@ -32,7 +32,7 @@ export default function Skills() {
               <div className="grid grid-cols-3 gap-6">
                 {category.items.map((item, i) => (
                   <div key={i} className="flex flex-col items-center">
-                    <div className="p-3 mb-2 shadow-md rounded-full bg-icon">
+                    <div className="p-3 mb-2 shadow-md rounded-full bg-icon transition-transform duration-200 hover:-translate-y-1">
                       <div className="w-9 h-9 relative">
                         <Image
                           src={item.icon}

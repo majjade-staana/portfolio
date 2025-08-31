@@ -30,7 +30,7 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={toggleTheme}
-      className="fixed p-3 rounded-full shadow-lg bg-toggler bottom-6 right-6 cursor-pointer"
+      className="z-10 fixed p-3 rounded-full shadow-lg bg-toggler bottom-6 right-6 cursor-pointer"
     >
         {theme === "dark" ? <Sun className="w-9 h-9 text-yellow-400" /> : <Moon className="w-9 h-9 text-gray-700" />}
     </button>
