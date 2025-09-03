@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import ThemeToggle from "./components/utils/ThemeToggle";
-import Navbar from "./components/Navbar";
+import ThemeToggle from "@/components/utils/ThemeToggle";
+import Navbar from "@/components/Navbar";
+import BackToTop from "@/components/utils/BackToTop";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,6 +32,7 @@ export default function RootLayout({
       >
         <ThemeToggle />
         <Navbar />
+        <BackToTop />
         {children}
       </body>
     </html>
