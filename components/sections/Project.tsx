@@ -69,9 +69,7 @@ export default function Projects() {
         ))}
       </div>
 
-      <div>
-        <ButtonLink href="/projects" variant="outline">View All Projects</ButtonLink>
-      </div>
+      <ButtonLink href="/projects" variant="outline">View All Projects</ButtonLink>
 
       {/* Grouped Projects Listing */}
       {/* <div className="text-left grid md:grid-cols-2 gap-8">

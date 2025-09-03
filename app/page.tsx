@@ -16,7 +16,7 @@ export default function Home() {
       </Section>
 
       {/* About Section */}
-      <Section id="about" className="pb-10">
+      <Section id="about" className="">
         <About />
       </Section>
 
@@ -26,14 +26,14 @@ export default function Home() {
       </Section>
 
       {/* Skills Section */}
-      <Section id="skills" className="pb-0">
+      <Section id="skills" className="">
         <Skills />
       </Section>
 
       {/* Experience Section */}
-      <Section id="experience">
+      {/* <Section id="experience" className="bg-accent">
         <Experience />
-      </Section>
+      </Section> */}
 
       {/* Contact Section */}
       <Section id="contact" className="bg-accent">

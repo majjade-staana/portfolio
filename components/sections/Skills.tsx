@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import skills from "@/json/skills.json";
-import { Container } from "@/components/UIElements";
+import { ButtonLink, Container } from "@/components/UIElements";
 
 export default function Skills() {
   return (
@@ -51,6 +51,8 @@ export default function Skills() {
           </motion.div>
         ))}
       </div>
+
+      <ButtonLink href="/about" variant="primary" className="mt-6">More Information</ButtonLink>
     </Container>
   );
 }
