@@ -62,10 +62,10 @@ export const ProjectCard = ({ index, project }: ProjectCardProps) => {
 
             {/* Project Content */}
             <div className={`p-6 flex flex-col flex-grow ${project.highlight ? "md:w-1/2" : ""}`}>
-              <h3 className={`text-lg font-semibold mb-2 text-bty ${project.highlight ? "md:text-3xl" : ""}`}>
+              <h3 className={`text-lg font-semibold mb-2 text-bty ${project.highlight ? "md:text-3xl" : "md:text-xl"}`}>
                 {project.title}
               </h3>
-              <p className={`flex-grow text-sm ${project.highlight ? "md:text-base" : ""}`}>{displayedText}</p>
+              <p className={`flex-grow text-base md:text-lg`}>{displayedText}</p>
               {isLong && (
                 <button
                   onClick={() => setExpanded(!expanded)}

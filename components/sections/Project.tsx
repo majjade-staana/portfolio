@@ -57,7 +57,7 @@ export default function Projects() {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="text-3xl md:text-4xl font-bold mb-12 text-bty"
+        className="text-3xl md:text-4xl font-bold mb-6 md:mb-12 text-bty"
       >
         Projects
       </motion.h2>
