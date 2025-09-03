@@ -2,41 +2,35 @@
 
 import { motion } from "framer-motion";
 import projectsData from "@/json/projects.json";
-import FallbackImage from "../utils/FallbackImage";
+import FallbackImage from "@/components/utils/FallbackImage";
 import { useEffect, useState } from "react";
 import { ExternalLink } from "lucide-react";
-import { Container } from "@/components/UIElements";
+import { ButtonLink, Container } from "@/components/UIElements";
 
 // Types
-type SubProject = {
-  title: string;
-  tech?: string[];
-  link?: string | null;
-  status?: string;
-};
+import { Project } from "@/lib/types";
+import { ProjectCard } from "../card/Project";
 
-type Project = {
-  title: string;
-  description: string;
-  image?: string | null;
-  demo?: string | null;
-  code?: string | null;
-  tech?: string[];
-  company?: string;
-  type: string;
-  projects?: SubProject[];
-  highlight?: boolean
-};
 
 const projects: Project[] = projectsData;
 
-export default function Projects({  }) {
+export default function Projects() {
   // Split normal projects vs grouped
   const individualProjects = projects.filter((p) => !p.projects);
-  const groupedProjects = projects.filter((p) => p.projects);
+  // const groupedProjects = projects.filter((p) => p.projects);
 
   const [maxLength, setMaxLength] = useState(500);
   const [expanded, setExpanded] = useState<number | null>(null);
+
+  function chunkArray(array: Project[], chunkSize: number): Project[][] {
+    const result: Project[][] = [];
+    for (let i = 0; i < array.length; i += chunkSize) {
+      result.push(array.slice(i, i + chunkSize));
+    }
+    return result;
+  }
+
+  const chunkedProjects = chunkArray(individualProjects, 4)[0];
 
   // Detect screen size
   useEffect(() => {
@@ -69,96 +63,18 @@ export default function Projects({  }) {
       </motion.h2>
 
       {/* Individual Projects Grid */}
-      <div className="text-left grid md:grid-cols-2 xl:grid-cols-3 gap-8 mb-8 pb-8 border-b-2 border-bty">
-        {individualProjects.map((project, index) => {
-          const length = project.highlight ? maxLength * 2.5 : maxLength
-          const isLong = project.description.length > length;
-          const displayedText = expanded === index
-            ? project.description
-            : project.description.slice(0, length) + (isLong ? "..." : "");
+      <div className="text-left grid md:grid-cols-2 xl:grid-cols-3 gap-8 mb-8 pb-8">
+        {chunkedProjects.map((project, index) => (
+          <ProjectCard key={index} index={index} project={project} />
+        ))}
+      </div>
 
-          return (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.2, duration: 0.6 }}
-            className={`
-              bg-card rounded-2xl shadow-lg overflow-hidden flex flex-col
-              ${project.highlight ? "md:col-span-2 xl:col-span-3 md:flex-row" : ""}
-            `}
-          >
-            {/* Project Image */}
-            <div className={`relative min-h-48 ${project.highlight ? "md:w-1/2 h-full" : "w-full"}`}>
-              <FallbackImage
-                src={project.image}
-                alt={project.title}
-                fill
-                className="object-cover"
-              />
-            </div>
-
-            {/* Project Content */}
-            <div className={`p-6 flex flex-col flex-grow ${project.highlight ? "md:w-1/2" : ""}`}>
-              <h3 className="text-2xl font-semibold mb-2 text-bty">
-                {project.title}
-                {/* {project.highlight && (
-                  <span className="ml-2 inline-block text-sm bg-yellow-500 text-white px-2 py-0.5 rounded">
-                    Featured
-                  </span>
-                )} */}
-              </h3>
-              <p className="flex-grow text-lg">{displayedText}</p>
-              {isLong && (
-                <button
-                  onClick={() => setExpanded(index === expanded ? null : index)}
-                  className="mt-2 text-yellow-600 text-sm font-medium md:hover:underline text-left"
-                >
-                  {index === expanded ? "Show less" : "Read more"}
-                </button>
-              )}
-
-              {/* Tech Stack */}
-              <div className="mt-2 flex flex-wrap gap-2">
-                {project.tech?.map((tech, i) => (
-                  <span
-                    key={i}
-                    className="text-sm px-2 py-1 rounded-md"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-
-              {/* Buttons */}
-              {(project.demo || project.code) &&
-                <div className="mt-4 flex gap-3">
-                  {project.demo && 
-                  <a
-                    href={project.demo}
-                    target="_blank"
-                    className="flex-1 bg-yellow-500 text-white text-center py-2 rounded shadow-md md:hover:bg-yellow-600 transition"
-                  >
-                    Live Demo
-                  </a>}
-                  {project.code && 
-                  <a
-                    href={project.code}
-                    target="_blank"
-                    className="flex-1 border border-yellow-500 text-yellow-500 text-center py-2 rounded shadow-md md:hover:bg-yellow-500 md:hover:text-white transition"
-                  >
-                    Code
-                  </a>}
-                </div>
-              }
-            </div>
-          </motion.div>
-          )
-        })}
+      <div>
+        <ButtonLink href="/projects" variant="outline">View All Projects</ButtonLink>
       </div>
 
       {/* Grouped Projects Listing */}
-      <div className="text-left grid md:grid-cols-2 gap-8">
+      {/* <div className="text-left grid md:grid-cols-2 gap-8">
         {groupedProjects.map((group, idx) => (
           <motion.div
             key={idx}
@@ -218,7 +134,7 @@ export default function Projects({  }) {
             </ul>
           </motion.div>
         ))}
-      </div>
+      </div> */}
     </Container>
   );
 }

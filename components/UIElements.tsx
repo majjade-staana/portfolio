@@ -25,7 +25,7 @@ type ButtonLinkProps = {
 
 const buttonStyles = {
   primary: "border-yellow-500 bg-yellow-500 text-background hover:bg-yellow-600 hover:border-yellow-600",
-  outline: "border-yellow-500 text-yellow-500 hover:bg-yellow-600 hover:text-background hover:border-yellow-600",
+  outline: "border-yellow-500 bg-background text-yellow-500 hover:bg-yellow-600 hover:text-background hover:border-yellow-600",
 };
 
 const ButtonLink = ({ href, children, variant = "primary", className }: ButtonLinkProps) => {
