@@ -6,49 +6,24 @@ import FallbackImage from "@/components/utils/FallbackImage";
 import { useEffect, useState } from "react";
 import { ExternalLink } from "lucide-react";
 import { ButtonLink, Container } from "@/components/UIElements";
+import { chunkArray } from "@/lib/helper";
 
 // Types
 import { Project } from "@/lib/types";
 import { ProjectCard } from "../card/Project";
 
-
 const projects: Project[] = projectsData;
 
-export default function Projects() {
+type ProjectsProps = {
+  isInner?: boolean;
+};
+
+export default function Projects({ isInner = false }: ProjectsProps) {
   // Split normal projects vs grouped
   const individualProjects = projects.filter((p) => !p.projects);
-  // const groupedProjects = projects.filter((p) => p.projects);
+  const groupedProjects = projects.filter((p) => p.projects);
 
-  const [maxLength, setMaxLength] = useState(500);
-  const [expanded, setExpanded] = useState<number | null>(null);
-
-  function chunkArray(array: Project[], chunkSize: number): Project[][] {
-    const result: Project[][] = [];
-    for (let i = 0; i < array.length; i += chunkSize) {
-      result.push(array.slice(i, i + chunkSize));
-    }
-    return result;
-  }
-
-  const chunkedProjects = chunkArray(individualProjects, 4)[0];
-
-  // Detect screen size
-  useEffect(() => {
-    const updateMaxLength = () => {
-      const windowWidth = window.innerWidth
-      if (windowWidth < 768) {
-        setMaxLength(100); // mobile
-      } else if (windowWidth < 1024) {
-        setMaxLength(150); // tablet
-      } else {
-        setMaxLength(200); // desktop
-      }
-    };
-
-    updateMaxLength(); // run on mount
-    window.addEventListener("resize", updateMaxLength);
-    return () => window.removeEventListener("resize", updateMaxLength);
-  }, []);
+  const chunkedProjects = isInner ? individualProjects : individualProjects.slice(0, 4);
 
   return (
     <Container className="max-w-7xl mx-auto text-center">
@@ -63,16 +38,17 @@ export default function Projects() {
       </motion.h2>
 
       {/* Individual Projects Grid */}
-      <div className="text-left grid md:grid-cols-2 xl:grid-cols-3 gap-8 mb-8 pb-8">
+      <div className="text-left grid md:grid-cols-2 xl:grid-cols-3 gap-8 mb-6 md:mb-8 pb-8">
         {chunkedProjects.map((project, index) => (
           <ProjectCard key={index} index={index} project={project} />
         ))}
       </div>
 
-      <ButtonLink href="/projects" variant="outline">View All Projects</ButtonLink>
+      {!isInner && <ButtonLink href="/projects" variant="outline">View All Projects</ButtonLink>}
 
       {/* Grouped Projects Listing */}
-      {/* <div className="text-left grid md:grid-cols-2 gap-8">
+      {isInner && 
+      <div className="text-left grid md:grid-cols-2 gap-8">
         {groupedProjects.map((group, idx) => (
           <motion.div
             key={idx}
@@ -132,7 +108,7 @@ export default function Projects() {
             </ul>
           </motion.div>
         ))}
-      </div> */}
+      </div>}
     </Container>
   );
 }

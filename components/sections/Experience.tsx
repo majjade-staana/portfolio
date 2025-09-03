@@ -31,7 +31,7 @@ export default function Experience() {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="text-3xl md:text-4xl font-bold text-center mb-12 text-bty"
+        className="text-3xl md:text-4xl font-bold text-center mb-6 md:mb-12 text-bty"
       >
         Experience & Education
       </motion.h2>
@@ -49,7 +49,7 @@ export default function Experience() {
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: index * 0.2, duration: 0.6 }}
-              className="mb-10 ml-6"
+              className="mb-6 md:mb-10 ml-6"
             >
               {/* Dot */}
               <div className="absolute -left-3 w-6 h-6 bg-yellow-500 rounded-full border-4 border-background"></div>

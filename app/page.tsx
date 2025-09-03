@@ -2,12 +2,11 @@ import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/About";
 import Projects from "@/components/sections/Project";
 import Skills from "@/components/sections/Skills";
-import Experience from "@/components/sections/Experience";
 import Contact from "@/components/sections/Contact";
 
 import { Section } from "@/components/UIElements";
 
-export default function Home() {
+export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
@@ -30,15 +29,10 @@ export default function Home() {
         <Skills />
       </Section>
 
-      {/* Experience Section */}
-      {/* <Section id="experience" className="bg-accent">
-        <Experience />
-      </Section> */}
-
       {/* Contact Section */}
       <Section id="contact" className="bg-accent">
         <Contact />
-      </Section>
+      </Section>  
     </>
   );
 }

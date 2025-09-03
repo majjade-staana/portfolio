@@ -4,8 +4,15 @@ import { motion } from "framer-motion";
 import skills from "@/json/skills.json";
 import { ButtonLink, Container } from "@/components/UIElements";
 import { SkillCard } from "@/components/card/Skill";
+import { chunkArray } from "@/lib/helper";
 
-export default function Skills() {
+type SkillsProps = {
+  isInner?: boolean;
+};
+
+export default function Skills({ isInner = false }: SkillsProps) {
+  const skillsArray = isInner ? skills : skills.slice(0, 3);
+
   return (
     <Container className="max-w-7xl mx-auto text-center">
       {/* Section Title */}
@@ -20,12 +27,12 @@ export default function Skills() {
 
       {/* Categories */}
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-        {skills.map((category, index) => (
-          <SkillCard key={index} category={category} index={index} />
+        {skillsArray.map((category, index) => (
+          <SkillCard key={index} category={category} index={index} isInner={isInner} />
         ))}
       </div>
 
-      <ButtonLink href="/about" variant="primary" className="mt-6">More Information</ButtonLink>
+      {!isInner && <ButtonLink href="/about" variant="primary" className="mt-6">More Information</ButtonLink>}
     </Container>
   );
 }
