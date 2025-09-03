@@ -16,4 +16,27 @@ const Container = ({ children, className }: {children: React.ReactNode; classNam
   );
 };
 
-export { Section, Container };
+type ButtonLinkProps = {
+  href: string;
+  children: React.ReactNode;
+  variant?: "primary" | "outline";
+  className?: string;
+};
+
+const buttonStyles = {
+  primary: "border-yellow-500 bg-yellow-500 text-background hover:bg-yellow-600 hover:border-yellow-600",
+  outline: "border-yellow-500 text-yellow-500 hover:bg-yellow-600 hover:text-background hover:border-yellow-600",
+};
+
+const ButtonLink = ({ href, children, variant = "primary", className }: ButtonLinkProps) => {
+  return (
+    <a
+      href={href}
+      className={`border-2 inline-block text-center py-3 px-6 rounded-[1px] font-bold shadow-md shadow-foreground/30 transition text-sm md:text-base ${buttonStyles[variant]} ${className}`}
+    >
+      {children}
+    </a>
+  );
+};
+
+export { Section, Container, ButtonLink };

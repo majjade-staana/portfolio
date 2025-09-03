@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Container } from "@/components/UIElements";
+import { ButtonLink, Container } from "@/components/UIElements";
 
 export default function Hero() {
   return (
@@ -22,18 +22,22 @@ export default function Hero() {
           </p>
 
           <div className="flex gap-4 justify-center md:justify-start">
-            <a
+            {/* bg-yellow-500 text-white px-6 py-3 rounded-[1px] shadow-md hover:bg-yellow-600 transition */}
+            <ButtonLink
               href="#projects"
-              className="bg-yellow-500 text-white px-6 py-3 rounded-[1px] shadow-md hover:bg-yellow-600 transition"
+              className=""
+              variant="primary"
             >
               View Projects
-            </a>
-            <a
+            </ButtonLink>
+            {/* border border-yellow-500 text-yellow-500 px-6 py-3 rounded-[1px] shadow-md hover:bg-yellow-500 hover:text-white transition */}
+            <ButtonLink
               href="#contact"
-              className="border border-yellow-500 text-yellow-500 px-6 py-3 rounded-[1px] shadow-md hover:bg-yellow-500 hover:text-white transition"
+              className=""
+              variant="outline"
             >
               Contact Me
-            </a>
+            </ButtonLink>
           </div>
         </motion.div>
 
