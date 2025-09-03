@@ -10,7 +10,7 @@ const Section = ({ id, children, className }: { id: string; children: React.Reac
 
 const Container = ({ children, className }: {children: React.ReactNode; className?: string }) => {
   return (
-    <div className={`max-w-7xl w-full mx-auto ${className}`}>
+    <div className={`max-w-5xl xl:max-w-7xl w-full mx-auto ${className}`}>
       {children}
     </div>
   );

@@ -30,7 +30,7 @@ type Project = {
 
 const projects: Project[] = projectsData;
 
-export default function Projects() {
+export default function Projects({  }) {
   // Split normal projects vs grouped
   const individualProjects = projects.filter((p) => !p.projects);
   const groupedProjects = projects.filter((p) => p.projects);
@@ -41,10 +41,13 @@ export default function Projects() {
   // Detect screen size
   useEffect(() => {
     const updateMaxLength = () => {
-      if (window.innerWidth < 768) {
-        setMaxLength(150); // mobile
+      const windowWidth = window.innerWidth
+      if (windowWidth < 768) {
+        setMaxLength(100); // mobile
+      } else if (windowWidth < 1024) {
+        setMaxLength(150); // tablet
       } else {
-        setMaxLength(300); // desktop
+        setMaxLength(200); // desktop
       }
     };
 
@@ -66,7 +69,7 @@ export default function Projects() {
       </motion.h2>
 
       {/* Individual Projects Grid */}
-      <div className="text-left grid md:grid-cols-3 gap-8 mb-8 pb-8 border-b-2 border-bty">
+      <div className="text-left grid md:grid-cols-2 xl:grid-cols-3 gap-8 mb-8 pb-8 border-b-2 border-bty">
         {individualProjects.map((project, index) => {
           const length = project.highlight ? maxLength * 2.5 : maxLength
           const isLong = project.description.length > length;
@@ -82,7 +85,7 @@ export default function Projects() {
             transition={{ delay: index * 0.2, duration: 0.6 }}
             className={`
               bg-card rounded-2xl shadow-lg overflow-hidden flex flex-col
-              ${project.highlight ? "md:col-span-3 md:flex-row" : ""}
+              ${project.highlight ? "md:col-span-2 xl:col-span-3 md:flex-row" : ""}
             `}
           >
             {/* Project Image */}
