@@ -5,6 +5,18 @@ import { motion } from "framer-motion";
 import { ButtonLink, Container } from "@/components/UIElements";
 
 export default function Hero() {
+  const scrollToSection = (id: string, offset: number = 0) => {
+    const element = document.getElementById(id);
+    if (element) {
+      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+      const offsetPosition = elementPosition - offset;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <Container className="flex flex-col-reverse md:flex-row items-center justify-between ">
     {/* Left Content */}
@@ -25,6 +37,7 @@ export default function Hero() {
             {/* bg-yellow-500 text-white px-6 py-3 rounded-[1px] shadow-md hover:bg-yellow-600 transition */}
             <ButtonLink
               href="#projects"
+              onClick={(e) => { e.preventDefault(); scrollToSection('projects', 106); }}
               className=""
               variant="primary"
             >
@@ -33,6 +46,7 @@ export default function Hero() {
             {/* border border-yellow-500 text-yellow-500 px-6 py-3 rounded-[1px] shadow-md hover:bg-yellow-500 hover:text-white transition */}
             <ButtonLink
               href="#contact"
+              onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}
               className=""
               variant="outline"
             >

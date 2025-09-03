@@ -21,6 +21,7 @@ type ButtonLinkProps = {
   children: React.ReactNode;
   variant?: "primary" | "outline";
   className?: string;
+  onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
 };
 
 const buttonStyles = {
@@ -28,11 +29,12 @@ const buttonStyles = {
   outline: "border-yellow-500 bg-background text-yellow-500 hover:bg-yellow-600 hover:text-background hover:border-yellow-600",
 };
 
-const ButtonLink = ({ href, children, variant = "primary", className }: ButtonLinkProps) => {
+const ButtonLink = ({ href, children, variant = "primary", className, onClick }: ButtonLinkProps) => {
   return (
     <a
       href={href}
-      className={`border-2 inline-block text-center py-3 px-6 rounded-[1px] font-bold shadow-md shadow-foreground/30 transition text-sm md:text-base ${buttonStyles[variant]} ${className}`}
+      onClick={onClick}
+      className={`border-2 inline-block text-center py-3 px-6 rounded-[1px] font-bold shadow-md shadow-foreground/30 transition text-sm md:text-base transform hover:-translate-y-1 ${buttonStyles[variant]} ${className}`}
     >
       {children}
     </a>
